@@ -1,0 +1,15 @@
+.text {
+  font-family: sans-serif;
+}
+
+ul {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  overflow: auto;
+  margin: 0 auto
+}
+
+ul li {
+  float: left;
+}

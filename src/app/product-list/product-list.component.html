@@ -1,0 +1,9 @@
+<div class="text">
+  <ul>
+    <li *ngFor="let product of productList">
+      <app-product-list-item-select
+        [product]="product">
+      </app-product-list-item-select>
+    </li>
+  </ul>
+</div>

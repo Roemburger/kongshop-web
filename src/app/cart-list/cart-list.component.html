@@ -1,0 +1,14 @@
+<div class="text">
+  <h2>Shopping Cart</h2>
+
+  <ul>
+    <li *ngFor="let cartItem of cartItemList">
+      <app-cart-list-item></app-cart-list-item>
+      <p class="total">Total: €{{ cartPrice }},-</p>
+      <button
+        class="btn btn-danger"
+        [disabled]="cartItemList.length < 1"
+        (click)="onConfirmOrder()">Order</button>
+    </li>
+  </ul>
+</div>

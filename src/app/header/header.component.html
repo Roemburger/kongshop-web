@@ -1,0 +1,10 @@
+<div class="wrapper">
+  <p class="title"><a routerLink="/">Kongshop</a></p>
+  <div class="nav">
+    <a routerLinkActive="active" *ngIf="isAdmin" routerLink="create"><span>Create Product</span></a>
+    <a routerLinkActive="active" *ngIf="isAuth" routerLink="order-list"><span>Orders</span></a>
+    <a routerLinkActive="active" routerLink="cart-list"><span>Cart: {{cartContentAmount}}</span></a>
+    <a routerLinkActive="active" *ngIf="!isAuth" routerLink="auth"><span>Login</span></a>
+    <a routerLinkActive="active" *ngIf="isAuth" (click)="logout()"><span>Logout</span></a>
+  </div>
+</div>

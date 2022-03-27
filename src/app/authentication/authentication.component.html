@@ -1,0 +1,18 @@
+<div class="container">
+  <div *ngIf="loggedIn">
+    <app-login>
+    </app-login>
+  </div>
+  <div *ngIf="!loggedIn">
+    <app-registration>
+    </app-registration>
+  </div>
+  <br>
+  <div>
+    <button class="btn btn-primary">
+      <a (click)="onToggle()">
+        {{loggedIn ? "Register" : "Login"}}
+      </a>
+    </button>
+  </div>
+</div>

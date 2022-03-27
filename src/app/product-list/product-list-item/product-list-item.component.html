@@ -1,0 +1,21 @@
+<div *ngIf="product != null">
+  <h2>{{ product.name }}</h2>
+  <div class="product-wrapper">
+    <div class="img-wrapper">
+      <img [src]="product.imageUrl">
+    </div>
+    <div class="price-wrapper">
+      <p class="description">{{ product.description }}</p>
+      <p class="price">€{{ product.price }},-</p>
+    </div>
+  </div>
+  <p>
+    <a [routerLink]="['/cart-list']" (click)="onAddToCart()" class="btn btn-success">Add to cart</a>
+  </p>
+  <p *ngIf="isAdmin">
+    <a [routerLink]="['/product-list', 'edit', productId]" class="btn btn-primary">Edit</a>
+  </p>
+  <p *ngIf="isAdmin">
+    <a (click)="onDelete()" class="btn btn-danger"> Delete </a>
+  </p>
+</div>

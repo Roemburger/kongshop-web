@@ -1,0 +1,44 @@
+:host {
+  display: block;
+  width: 250px;
+  height: 260px;
+  margin: 10px;
+  cursor: pointer;
+  transform: translate(0,0);
+  transition: transform 0.2s, box-shadow 0.2s;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.12);
+}
+
+:host:hover {
+  transform: translate(0,-5%);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+:host:focus {
+  outline:0;
+}
+
+img {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 200px;
+  max-height: 200px;
+}
+
+p.name {
+  position: absolute;
+  top: 200px;
+  left: 25px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+p.price {
+  position: absolute;
+  top: 200px;
+  right: 25px;
+  font-family: sans-serif;
+}

@@ -1,0 +1,16 @@
+<div *ngIf="cartItems">
+  <td>
+    {{ cartItems.cartItem?.name }}
+  </td>
+  <td>
+    <input type="number" class="form-control"
+    [(ngModel)]="cartItems.amount" )]
+    (change)="onChangeAmount()">
+  </td>
+  <td>
+    {{ cartItems.amount * cartItems.cartItem.price }}
+  </td>
+  <td>
+    <button class="btn btn-danger" (click)="deleteCartItem()">Delete</button>
+  </td>
+</div>

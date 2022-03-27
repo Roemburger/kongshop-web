@@ -1,0 +1,18 @@
+<div>
+  <h2>Shopping Cart</h2>
+
+  <div class="row">
+    <table class="table">
+      <th scope="col">Product</th>
+      <th scope="col">Amount</th>
+      <th scope="col">Price</th>
+      <tbody>
+      <tr
+        app-cart-list-item-select
+        *ngFor="let cartItem of cartItemList; let i = index"
+        cartItem="cartItem">
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
